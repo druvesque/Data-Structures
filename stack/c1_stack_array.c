@@ -23,7 +23,11 @@ int main() {
         printf("4. EXIT\n");
         printf("----------------\n");
         printf("Enter your choice: ");
-        scanf("%d", &choice);
+        if (scanf("%d", &choice) != 1) {
+            printf("\nScanf failed!\n");
+            while(getchar() != '\n');
+            continue;
+        }
 
         switch(choice) {
             case 1:
@@ -43,6 +47,7 @@ int main() {
         printf("\nDo you want to continue (press 0 or 1)?: ");
         scanf("%d", &option);
     }
+    return 0;
 }
 
 void push() {
