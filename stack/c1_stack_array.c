@@ -36,7 +36,7 @@ int main() {
                 display();
                 break;
             case 4:
-                break;
+                return 0;
             default:
                 printf("Invalid Choice\n\n");
         }
@@ -73,6 +73,10 @@ void pop() {
 }
 
 void display() {
+    if (s.top == -1) {
+        printf("The stack is empty!");
+        return;
+    }
     printf("The stack is:\t");
     for (int i = s.top; i != -1; i--)
         printf("%d\t", s.stack[i]);
