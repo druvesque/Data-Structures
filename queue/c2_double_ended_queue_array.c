@@ -66,7 +66,7 @@ void display() {
         printf("\nQueue is Empty!");
         return;
     }
-    printf("The Queue is:\t");
+    printf("\nThe Queue is:\t");
     for (int i = q.front; i <= q.rear; i++)
         printf("%d\t", q.queue[i]);
 }
